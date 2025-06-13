@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Enthusiast Portfolio | DMT Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #8b5cf6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #06b6d4;
+            --transition: all 0.3s ease;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .dmt-banner {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1677442135133-33d364e7d1b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #e2e8f0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .profile-img {
+            flex: 1;
+            position: relative;
+            min-width: 300px;
+        }
+
+        .profile-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .dmt-logo {
+
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .dmt-logo img {
+
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .skills {
+            background-color: #f1f5f9;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card p {
+            color: var(--gray);
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 3rem 0 2rem;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--dark);
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .instagram:hover {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+
+        .linkedin:hover {
+            background-color: #0a66c2;
+        }
+
+        .youtube:hover {
+            background-color: #ff0000;
+        }
+
+        .posts-btn {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .blog-preview {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .blog-header {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .blog-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content {
+            padding: 3rem;
+        }
+
+        .blog-post {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: #f8fafc;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .blog-post:hover {
+            transform: translateX(10px);
+            background: #f1f5f9;
+        }
+
+        .blog-img {
+            flex: 1;
+            min-width: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .blog-post:hover .blog-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-text {
+            flex: 2;
+        }
+
+        .blog-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .blog-text p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .view-more {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            color: #94a3b8;
+            margin: 1.5rem 0;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+        }
+
+        /* Blog Page Styles */
+        .blog-page {
+            display: none;
+            padding: 4rem 0;
+        }
+
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .blog-article h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .article-img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .article-content {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h2 {
+            margin: 2rem 0 1rem;
+            color: var(--dark);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .blog-post {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .skill-card {
+                min-width: 100%;
+            }
+
+            .social-buttons {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- DMT Banner
+    <div class="dmt-banner">
+        Digital Media Translation Specialist | AI Enthusiast
+    </div> -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>AI Enthusiast</h1>
+                <p>Bridging the gap between artificial intelligence and human communication</p>
+                <a href="#about" class="btn" onclick="showPortfolioPage()">Learn About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Page -->
+    <div id="portfolio-page">
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-title">
+
+                </div>
+                <div class="about-content">
+                    <div class="profile-img">
+                        <div class="dmt-logo">
+                            <img src="images/img.jpg" alt="DMT Logo">
+                        </div>
+                        <img src="images/myself.jpg" alt="AI Enthusiast Profile">
+                    </div>
+                    <div class="about-text">
+                        <h2>Hashim Mohammed</h2>
+
+                        <p>I'm an AI enthusiast passionate about exploring the possibilities of artificial intelligence
+                            and its potential to transform industries and everyday life. I stay up to date with the
+                            latest advancements in machine learning, natural language processing, and generative AI.
+                            Whether it's building smart applications, experimenting with AI tools, or simply
+                            understanding how algorithms shape our world, I enjoy being at the forefront of this
+                            exciting field. I'm always eager to learn, create, and collaborate on projects that push the
+                            boundaries of what AI can do.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Specialized Skills</h2>
+
+                </div>
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI Concept Understanding</h3>
+                        <p>Basic knowledge of machine learning principles, neural networks, and common AI terminology to
+                            engage in meaningful discussions about AI technology.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Python Fundamentals</h3>
+                        <p>Foundational Python programming skills for implementing basic AI/ML scripts and working with
+                            popular libraries like NumPy and Pandas.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Model Training Basics</h3>
+                        <p>Hands-on experience with training simple machine learning models using platforms like
+                            scikit-learn and understanding hyperparameters.</p>
+                    </div>
+
+                </div>
+
+                <!-- Social Media Buttons -->
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/hashim_codes?utm_source=qr" target="_blank"
+                        class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/hashim-mohammed-8ab3a0360/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                        target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@hashimissam" target="_blank" class="social-btn youtube"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- My Posts Button -->
+                <div class="posts-btn">
+                    <a href="#blog" class="btn btn-secondary">View My AI Blog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview Section -->
+        <section id="blog">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Latest AI Blogs</h2>
+                </div>
+                <div class="blog-preview">
+                    <div class="blog-header">
+                        <h2>Featured Article</h2>
+                        <p>Exploring the frontier of AI communication</p>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-post" onclick="showBlogPage()">
+                            <div class="blog-img">
+                                <img src="images/ai1.png" alt="AI Translation">
+                            </div>
+                            <div class="blog-text">
+                                <h3>The Future of AI-Generated Content Translation</h3>
+                                <p>How neural networks are revolutionizing the way we translate and adapt AI outputs for
+                                    human consumption across different media formats.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Page -->
+    <div id="blog-page" class="blog-page">
+        <div class="container">
+            <div class="blog-article">
+                <h1>The Future of AI-Generated Content Translation</h1>
+
+                <img src="images/ai1.png" alt="AI Translation" class="article-img">
+                <div class="article-content">
+                    <p>In the rapidly evolving landscape of artificial intelligence, one of the most significant
+                        challenges we face is translating complex AI-generated content into formats that are accessible
+                        and meaningful to human audiences. As AI systems become increasingly sophisticated, their
+                        outputs often contain nuances and contextual layers that traditional translation methods
+                        struggle to capture.</p>
+
+                    <h2>The Neural Translation Revolution</h2>
+                    <p>Recent advancements in neural machine translation (NMT) have transformed our approach to this
+                        challenge. Unlike rule-based or statistical methods, NMT systems use deep learning to understand
+                        context, idioms, and cultural references, enabling more accurate and natural translations of
+                        AI-generated content.</p>
+
+                    <p>For digital media translation specialists, this means we can now develop pipelines that maintain
+                        the integrity of AI outputs while adapting them for diverse audiences. A key innovation has been
+                        the development of context-aware translation models that consider not just the immediate text,
+                        but the entire communication chain from AI generation to human consumption.</p>
+
+                    <h2>Multimedia Adaptation Challenges</h2>
+                    <p>Translating AI content for different media formats presents unique challenges. Video content
+                        requires synchronization of translated speech with visual elements, while interactive media
+                        needs to preserve functionality across language boundaries. Our work at the DMT Lab has focused
+                        on creating adaptive frameworks that can:</p>
+
+                    <ul>
+                        <li>Maintain temporal alignment in video translations</li>
+                        <li>Preserve interactive elements in translated applications</li>
+                        <li>Adapt cultural references for global audiences</li>
+                        <li>Handle real-time translation of live AI outputs</li>
+                    </ul>
+
+                    <p>These frameworks are particularly valuable for global enterprises deploying AI customer service
+                        solutions, where accurate and culturally appropriate communication is essential.</p>
+
+                    <h2>The Human-AI Collaboration</h2>
+                    <p>Despite technological advances, human expertise remains crucial in the translation process. Our
+                        approach combines the efficiency of AI with the nuanced understanding of human translators,
+                        creating a collaborative workflow where:</p>
+
+                    <ol>
+                        <li>AI handles initial translation and adaptation</li>
+                        <li>Human specialists review for cultural and contextual accuracy</li>
+                        <li>Quality assurance algorithms verify consistency</li>
+                        <li>Final outputs are optimized for specific media formats</li>
+                    </ol>
+
+                    <p>This hybrid model has proven especially effective for translating creative AI outputs like
+                        poetry, storytelling, and marketing content, where emotional resonance is as important as
+                        factual accuracy.</p>
+
+                    <h2>Future Directions</h2>
+                    <p>Looking ahead, we're exploring several promising areas:</p>
+
+                    <p><strong>Emotive Translation:</strong> Developing systems that can preserve and adapt the
+                        emotional tone of AI-generated content across cultures.</p>
+
+                    <p><strong>Real-time Adaptive Translation:</strong> Creating solutions that can adjust translations
+                        based on audience feedback during live presentations or streams.</p>
+
+                    <p><strong>Cross-modal Translation:</strong> Enabling seamless translation between different media
+                        formats (e.g., converting AI-generated text into sign language avatars).</p>
+
+                    <p>As AI continues to evolve, so too must our approaches to making its outputs accessible. The
+                        future of AI communication lies in translation systems that are as intelligent and adaptive as
+                        the AI they serve.</p>
+                </div>
+                <a href="#" class="back-btn" onclick="showPortfolioPage()">&larr; Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>AI Enthusiast</h3>
+                <p>Exploring the intersection of artificial intelligence and human communication through advanced
+                    translation techniques</p>
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/hashim_codes?utm_source=qr" target="_blank"
+                        class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/hashim-mohammed-8ab3a0360/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                        target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@hashimissam" target="_blank" class="social-btn youtube"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AI Enthusiast Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to show blog page
+        function showBlogPage() {
+            document.getElementById('portfolio-page').style.display = 'none';
+            document.getElementById('blog-page').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        // Function to show portfolio page
+        function showPortfolioPage() {
+            document.getElementById('blog-page').style.display = 'none';
+            document.getElementById('portfolio-page').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
